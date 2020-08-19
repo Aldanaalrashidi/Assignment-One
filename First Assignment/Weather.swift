@@ -9,11 +9,14 @@
 import SwiftUI
 
 struct Weather: View {
-    let times = ["Now", "4AM", "5AM", "6AM", "7AM", "8AM", "9AM"]
-    let images = ["moon.stars.fill", "moon.stars.fill", "sunrise.fill", "cloud.sun.fill", "cloud.sun.fill", "sun.max.fill", "sun.max.fill"]
-    let temperatures = ["30°", "32°", "31°", "35°", "38°", "40°", "41°"]
+    let times = ["Now", "4AM", "5AM", "6AM", "7AM", "8AM", "9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "5PM", "6PM", "7PM"]
+    let scrollViewImgs = ["moon.stars.fill", "moon.stars.fill", "sunrise.fill", "cloud.sun.fill", "cloud.sun.fill", "sun.max.fill", "sun.max.fill", "sun.max.fill", "sun.max.fill", "cloud.sun.fill", "cloud.sun.fill", "sun.max.fill"
+    , "sun.max.fill", "sunset.fill", "moon.stars.fill", "moon.stars.fill", "moon.stars.fill"]
+    let weekImgs = ["moon.stars.fill", "moon.stars.fill", "sunrise.fill", "cloud.sun.fill", "cloud.sun.fill", "sun.max.fill", "sun.max.fill"]
+    let scrollViewTemp = ["30°", "32°", "31°", "35°", "38°", "40°", "41°", "45°", "46°", "49°", "52°", "55°", "56°", "50°", "45°", "42°", "36°"]
+    let weekTemp = ["22°", "24°", "30°", "34°", "43°", "29°", "33°"]
     let daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
-    let mintemperatures = ["22°", "24°", "25°", "29°", "30°", "31°", "36°"]
+    
     var body: some View {
         ZStack(alignment: .center){
             Image("BG")
@@ -42,7 +45,11 @@ struct Weather: View {
                     Text("24°")
                         .foregroundColor(Color.white)
                 }
+                }.padding()
                     Divider()
+                
+                ScrollView(.horizontal){
+                VStack{
                 HStack(spacing: 12.8){
                     ForEach(times, id: \.self){
                         time in Text(time).foregroundColor(Color.white)
@@ -51,7 +58,7 @@ struct Weather: View {
                     }
                     }
                     HStack(spacing: 32){
-                        ForEach(images, id: \.self){
+                        ForEach(scrollViewImgs, id: \.self){
                             image in Image(systemName: image)
                                 .resizable()
                                 .frame(width: 25, height: 25)
@@ -59,13 +66,14 @@ struct Weather: View {
                         }
                     }
                     HStack(spacing: 28){
-                        ForEach(temperatures, id: \.self){
+                        ForEach(scrollViewTemp, id: \.self){
                             temperature in Text(temperature)
                                 .foregroundColor(Color.white)
                                 .bold()
                         }
                     }
-                }.padding()
+                    }
+                }
                 
                 HStack(alignment: .center, spacing: 95){
                     VStack(spacing: 14){
@@ -77,7 +85,7 @@ struct Weather: View {
                         }
                     }
                     VStack(spacing: 14){
-                        ForEach(images, id: \.self){
+                        ForEach(weekImgs, id: \.self){
                             image in Image(systemName: image)
                                 .resizable()
                                 .frame(width: 25, height: 25)
@@ -85,7 +93,7 @@ struct Weather: View {
                         }
                     }
                     VStack(spacing: 17){
-                        ForEach(temperatures, id: \.self){
+                        ForEach(weekTemp, id: \.self){
                             temperature in HStack(spacing: 10){
                                 Text(temperature)
                                     .foregroundColor(Color.white)
