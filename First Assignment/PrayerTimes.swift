@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  PrayerTimes.swift
 //  First Assignment
 //
 //  Created by tahani alrashidi on 8/19/20.
@@ -8,14 +8,14 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct PrayerTimes: View {
     var body: some View {
-        Text("Hello, World!")
+        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct PrayerTimes_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        PrayerTimes()
     }
 }

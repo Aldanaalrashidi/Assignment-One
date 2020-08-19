@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		57620DF724ED9F3900E5BD62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57620DF624ED9F3900E5BD62 /* AppDelegate.swift */; };
 		57620DF924ED9F3900E5BD62 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57620DF824ED9F3900E5BD62 /* SceneDelegate.swift */; };
-		57620DFB24ED9F3900E5BD62 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57620DFA24ED9F3900E5BD62 /* ContentView.swift */; };
 		57620DFD24ED9F3C00E5BD62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57620DFC24ED9F3C00E5BD62 /* Assets.xcassets */; };
 		57620E0024ED9F3C00E5BD62 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57620DFF24ED9F3C00E5BD62 /* Preview Assets.xcassets */; };
 		57620E0324ED9F3C00E5BD62 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57620E0124ED9F3C00E5BD62 /* LaunchScreen.storyboard */; };
+		57620E0D24ED9F6C00E5BD62 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57620E0C24ED9F6C00E5BD62 /* Calculator.swift */; };
+		57620E0F24ED9F9400E5BD62 /* PrayerTimes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57620E0E24ED9F9400E5BD62 /* PrayerTimes.swift */; };
+		57620E1124EDA04F00E5BD62 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57620E1024EDA04F00E5BD62 /* Weather.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		57620DF324ED9F3900E5BD62 /* First Assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "First Assignment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		57620DF624ED9F3900E5BD62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57620DF824ED9F3900E5BD62 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		57620DFA24ED9F3900E5BD62 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		57620DFC24ED9F3C00E5BD62 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		57620DFF24ED9F3C00E5BD62 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		57620E0224ED9F3C00E5BD62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		57620E0424ED9F3C00E5BD62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57620E0C24ED9F6C00E5BD62 /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
+		57620E0E24ED9F9400E5BD62 /* PrayerTimes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTimes.swift; sourceTree = "<group>"; };
+		57620E1024EDA04F00E5BD62 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +62,9 @@
 			children = (
 				57620DF624ED9F3900E5BD62 /* AppDelegate.swift */,
 				57620DF824ED9F3900E5BD62 /* SceneDelegate.swift */,
-				57620DFA24ED9F3900E5BD62 /* ContentView.swift */,
+				57620E1024EDA04F00E5BD62 /* Weather.swift */,
+				57620E0C24ED9F6C00E5BD62 /* Calculator.swift */,
+				57620E0E24ED9F9400E5BD62 /* PrayerTimes.swift */,
 				57620DFC24ED9F3C00E5BD62 /* Assets.xcassets */,
 				57620E0124ED9F3C00E5BD62 /* LaunchScreen.storyboard */,
 				57620E0424ED9F3C00E5BD62 /* Info.plist */,
@@ -147,8 +153,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				57620DF724ED9F3900E5BD62 /* AppDelegate.swift in Sources */,
+				57620E0D24ED9F6C00E5BD62 /* Calculator.swift in Sources */,
+				57620E0F24ED9F9400E5BD62 /* PrayerTimes.swift in Sources */,
+				57620E1124EDA04F00E5BD62 /* Weather.swift in Sources */,
 				57620DF924ED9F3900E5BD62 /* SceneDelegate.swift in Sources */,
-				57620DFB24ED9F3900E5BD62 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
