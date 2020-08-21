@@ -21,11 +21,11 @@ struct PrayerTimes: View {
             VStack(spacing: 15){
                 Spacer()
                 HStack{
-                    Image(systemName: "list.bullet")
+                    Image(systemName: "folder.fill")
                         .resizable()
                         .modifier(symbolModifier())
                     Spacer()
-                    Image(systemName: "person.fill")
+                    Image(systemName: "gear")
                         .resizable()
                         .modifier(symbolModifier())
                 }.padding()
