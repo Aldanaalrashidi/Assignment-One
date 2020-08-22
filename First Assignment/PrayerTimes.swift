@@ -99,7 +99,7 @@ struct PrayerTimes_Previews: PreviewProvider {
 struct symbolModifier: ViewModifier{
     func body(content: Content) -> some View {
         content
-        .frame(width: 30, height: 30)
-        .foregroundColor(Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)))
+            .frame(width: 30, height: 30)
+            .foregroundColor(Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)))
     }
 }
