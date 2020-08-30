@@ -9,17 +9,18 @@
 import SwiftUI
 
 struct Calculator: View {
-    let column1 = ["AC", "7", "4", "1"]
-    let column2 = ["±", "8", "5", "2"]
-    let column3 = ["%", "9", "6", "3"]
-    let column4 = ["÷", "×", "-", "+"]
+   @State var column1 = ["AC", "7", "4", "1"]
+   @State var column2 = ["±", "8", "5", "2"]
+   @State var column3 = ["%", "9", "6", "3"]
+   @State var column4 = ["÷", "×", "-", "+"]
+   @State var number: String
     
     var body: some View {
         ZStack(alignment: .bottom){
             Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1))
                 .edgesIgnoringSafeArea(.all)
             VStack(spacing: 15){
-                Text("555")
+                Text(number)
                     .font(.system(size: 115))
                     .fontWeight(.thin)
                     .foregroundColor(Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)))
@@ -27,36 +28,80 @@ struct Calculator: View {
                 HStack{
                     VStack(spacing: 11){
                         ForEach(self.column1, id: \.self){
-                            button in Text(button)
-                                .modifier(CalculatorModifierGray())
+                            button in Button(action: {
+                                if button == "AC"{
+                                    self.number = "0"
+                                }else{
+                                self.number = button
+                                }
+                            }) {
+                                Text(button)
+                                    .modifier(CalculatorModifierGray())
+                            }
                         }}
                     VStack(spacing: 11){
                         ForEach(self.column2, id: \.self){
-                            button in Text(button)
-                                .modifier(CalculatorModifierGray())
+                            button in Button(action: {
+                                if button == "±"{
+                                    self.number = ""
+                                }else{
+                                self.number = button
+                                }
+                            }) {
+                                Text(button)
+                                    .modifier(CalculatorModifierGray())
+                            }
                         }}
                     VStack(spacing: 11){
                         ForEach(self.column3, id: \.self){
-                            button in Text(button)
-                                .modifier(CalculatorModifierGray())
+                            button in Button(action: {
+                               if button == "%"{
+                                    self.number = ""
+                                }else{
+                                self.number = button
+                                }
+                            }) {
+                                Text(button)
+                                    .modifier(CalculatorModifierGray())
+                            }
                         }}
                     VStack(spacing: 11){
                         ForEach(self.column4, id: \.self){
-                            button in Text(button)
-                                .modifier(CalculatorModifierOrange())
+                            button in
+                               Button(action: {
+                                self.number = ""
+                                }) {
+                                    Text(button)
+                                        .modifier(CalculatorModifierOrange())
+                                }
                         }}
                 }
                 HStack{
-                    Text("0")
-                        .font(.system(size: 32))
-                        .foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
-                        .frame(width: 178, height: 85)
-                        .background(Color(#colorLiteral(red: 0.556738019, green: 0.5565260053, blue: 0.577188611, alpha: 1)))
-                        .cornerRadius(40)
-                    Text(".")
-                        .modifier(CalculatorModifierGray())
-                    Text("=")
-                        .modifier(CalculatorModifierOrange())
+                    Button(action: {
+                        self.number = "0"
+                    }) {
+                        Text("0")
+                            .font(.system(size: 32))
+                            .foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
+                            .frame(width: 178, height: 85)
+                            .background(Color(#colorLiteral(red: 0.556738019, green: 0.5565260053, blue: 0.577188611, alpha: 1)))
+                            .cornerRadius(40)
+                    }
+                    Button(action: {
+                        self.number = ""
+                    }) {
+                        Text(".")
+                            .modifier(CalculatorModifierGray())
+                    }
+                    Button(action: {
+                        self.number = ""
+                    }) {
+                        Text("=")
+                            .modifier(CalculatorModifierOrange())
+                        
+                    }
+                    
+                    
                 }
             }.padding()
         }
@@ -65,7 +110,7 @@ struct Calculator: View {
 
 struct Calculator_Previews: PreviewProvider {
     static var previews: some View {
-        Calculator()
+        Calculator(number: "0")
     }
 }
 
